@@ -131,12 +131,13 @@ function draw(){
 function gameOver(){
     if(bricks.length > 10){
         showYouLose();
+        saveScore();
         GAME_OVER = true;
     }
     if(LEVEL == MAX_LEVEL + 1){
         hideLevelUp();
-        showYouWin();
         saveScore();
+        showYouWin();
         GAME_OVER = true;
     }
 }
@@ -159,9 +160,10 @@ function levelUp(){
 function saveScore(){
     const scores = {
         player : PLAYER_NAME,
-        score : SCORE
+        score : parseInt(SCORE)
     };
-    if(localStorage.getItem("leaderboard")){
+
+    if (localStorage.getItem("leaderboard")) {
         var array = JSON.parse(localStorage.getItem("leaderboard"));
         array.push(scores);
         localStorage.setItem("leaderboard", JSON.stringify(array));
