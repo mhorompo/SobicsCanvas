@@ -295,10 +295,17 @@ function addBlock(targetColumn) {
 
     while(bricks[row][targetColumn].status != true && n >= 0){
         n--;
+        if(n >= 0){
+            row = n;
+        }
         console.log(n);
     }
 
-    row++;
+    if(n < 0){
+        row = 0;
+    } else {
+        row++;
+    }
 
     console.log(row);
 
