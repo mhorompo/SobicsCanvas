@@ -11,21 +11,35 @@
         <img src="img/SOUND_ON.png" alt="" id="sound" style="display: none;">
     </div>
     
-    <div id="gameover">
+    <div id="gameover" class="animate">
         <img src="img/youwon.png" alt="" id="youwon">
         <img src="img/gameover.png" alt="" id="youlose">
         <div id="restart">Play Again!</div>
+        <div id="leaderboard">Leaderboard</div>
     </div>
+
+    <div id="levelup" class="animate">
+        <div id="level">Level Up</div>
+        <div id="continue">Continue</div>
+    </div>
+
+
+    <div id="table" class="animate">
+        <div id="cont"></div>
+        <div id="restarttable">Play Again!</div>
+    </div>
+    
 
     <div id="myProgress" style="display: none;">
         <div id="myBar"></div>
     </div>
 
-    <div class="menu">
+    <div class="menu animate">
         <button id="button" onclick="startGame();">Start Game</button>
+        <input type="text" placeholder="PLAYER NAME" id="playername">
     </div>
    
-    <canvas id="sobics" width="1000" height="700" style="display: none;"></canvas>
+    <canvas id="sobics" width="1000" height="700" style="display: none;" class="animate"></canvas>
     
     <script src="components.js"></script>
     <script src="game.js"></script>

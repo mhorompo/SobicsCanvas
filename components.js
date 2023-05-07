@@ -13,27 +13,27 @@ LIFE_IMG.src = "img/life.png";
 const SCORE_IMG = new Image();
 SCORE_IMG.src = "img/score.png";
 
+const CHARACTER_IMG = new Image();
+CHARACTER_IMG.src = "img/character.png";
 
 /////// END LOAD IMAGES ////////
 
+/////// LOAD SOUNDS ///////
+
+/*const brickSound = new Audio("sounds/brick.mp3");
+
+const backgroundMusic = new Audio("sounds/music.mp3");
+backgroundMusic.loop = true;
+
+const WIN = new Audio("sounds/win.mp3");
+*/
+const AUDIO = {
+    brickSound : new Audio("sounds/brick.mp3"),
+    backgroundMusic : new Audio("sounds/music.mp3"),
+    WIN : new Audio("sounds/win.mp3")
+}
+
+AUDIO.backgroundMusic.loop = true;
+/////// END LOAD SOUNDS ///////
+
 // ************************ //
-
-/////// LOAD SOUNDS ////////
-
-const WALL_HIT = new Audio();
-WALL_HIT.src = "sounds/wall.mp3";
-
-const LIFE_LOST = new Audio();
-LIFE_LOST.src = "sounds/life_lost.mp3";
-
-const PADDLE_HIT = new Audio();
-PADDLE_HIT.src = "sounds/paddle_hit.mp3";
-
-const WIN = new Audio();
-WIN.src = "sounds/win.mp3";
-
-const BRICK_HIT = new Audio();
-BRICK_HIT.src = "sounds/brick_hit.mp3";
-
-
-/////// END LOAD SOUNDS ////////
