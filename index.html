@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2D Breakout Game - JavScript</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Germania+One">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sound">
+        <img src="img/SOUND_ON.png" alt="" id="sound" style="display: none;">
+    </div>
+    
+    <div id="gameover">
+        <img src="img/youwon.png" alt="" id="youwon">
+        <img src="img/gameover.png" alt="" id="youlose">
+        <div id="restart">Play Again!</div>
+    </div>
+
+    <div id="myProgress" style="display: none;">
+        <div id="myBar"></div>
+    </div>
+
+    <div class="menu">
+        <button id="button" onclick="startGame();">Start Game</button>
+    </div>
+   
+    <canvas id="sobics" width="1000" height="700" style="display: none;"></canvas>
+    
+    <script src="components.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
